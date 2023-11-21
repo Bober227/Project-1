@@ -1,0 +1,45 @@
+.bottom-page {
+  display: flex;
+  flex-direction: column;
+}
+
+//====================================================================================================
+.footer {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: toRem(24);
+    padding-bottom: toRem(30);
+    @include adaptiveValue("padding-top", 90, 20);
+    @include adaptiveValue("padding-bottom", 90, 20);
+  }
+  &__social {
+    display: flex;
+
+    .social__link {
+      font-size: toRem(26);
+      color: $greyColor;
+      transition: color 0.3s;
+      @media (any-hover: hover) {
+        &:hover {
+          color: $purpleColor;
+        }
+      }
+    }
+  }
+  &__copy {
+    transition: all 0.3s;
+    color: $greyColor;
+    line-height: 121.428571%; /* 17/14 */
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+        color: $purpleColor;
+      }
+    }
+  }
+}
+//====================================================================================================
